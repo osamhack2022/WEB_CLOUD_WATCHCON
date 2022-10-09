@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  frontend:
+    build:
+      context: ./frontend/
+      dockerfile: ./Dockerfile
+    ports:
+      - 80:3306
+    links:
+      - api.nontrusion.local
+  api.nontrusion.local:
+    build:
+      context: ./api/
+      dockerfile: ./Dockerfile
+    ports:
+      - 80:8080

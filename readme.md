@@ -1,4 +1,4 @@
-# 차세대 통합 모니터링 솔루션, **"NonTrusion"**
+# 국방정보체계 모니터링 플랫폼,<br>**"NonTrusion"**
 ![Logo](./nontrusion_logo.png)
 
 ## 프로젝트 소개
@@ -31,9 +31,9 @@ $ yarn start or npm run start
 ## 팀 정보 (Team Information)
 |        **역할** | **이름** |                   **Github**                   |
 |----------------:|:--------:|:----------------------------------------------|
-|   팀장, Backend |  이창엽  |     [@YeoPEVA](https://github.com/YeoPEVA)     |
-| 디자인, Backend |  정준영  | [@jeongjy0317](https://github.com/jeongjy0317) |
-|       서버 관리 |  이진우  |    [@Solrukas](https://github.com/Solrukas)    |
+|   **Leader**, Backend |  이창엽  |     [@YeoPEVA](https://github.com/YeoPEVA)     |
+| Design, Backend |  정준영  | [@jeongjy0317](https://github.com/jeongjy0317) |
+|       Server |  이진우  |    [@Solrukas](https://github.com/Solrukas)    |
 |        Frontend |  나영언  |  [@young-yeon](https://github.com/young-yeon)  |
 |        Frontend |  정지용  |    [@camp5803](https://github.com/camp5803)    |
 
