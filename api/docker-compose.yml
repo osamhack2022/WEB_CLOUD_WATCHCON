@@ -1,0 +1,31 @@
+version: '3.2'
+
+services:
+  nginx:
+    container_name: nginx
+    image: 'nginx:latest'
+    networks:
+      - default
+      - proxy_network
+    volumes:
+      - /docker/main/web:/usr/share/nginx/html
+      - /docker/main/config/nginx:/etc/nginx/
+    restart: always
+    depends_on:
+      - db
+
+  db:
+    container_name: db
+    image: "mariadb:latest"
+    networks:
+      - default
+      - proxy_network #develop network
+    environment:
+      MARIADB_ROOT_PASSWORD: "!asdf1234"
+    volumes:
+      - /docker/main/config/mariadb:/var/lib/mysql
+    restart: always
+
+networks:
+  proxy_network:
+    external: true
