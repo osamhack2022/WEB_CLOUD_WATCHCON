@@ -1,0 +1,65 @@
+version: '3.2'
+
+services:
+  watchcon_db:
+    container_name: watchcon_db
+    image: mariadb
+    volumes:
+      - watchcon_db:/var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=watchcondb
+    restart: always
+
+  watchcon_db_admin:
+    container_name: watchcon_db_admin
+    image: phpmyadmin
+    networks:
+      - default
+      - proxy_network #develop network
+    environment:
+      - MYSQL_ROOT_PASSWORD=watchcondb
+      - PMA_HOSTS=watchcon_db
+      - PMA_PORTS=3306
+      - PMA_ARBITRARY=1
+    depends_on:
+      - watchcon_db
+    restart: always
+
+
+
+  # reverse proxy 필요 시 사용
+  # npm:
+  #   container_name: npm
+  #   image: 'jc21/nginx-proxy-manager:latest'
+  #   networks:
+  #     - default
+  #     - proxy_network
+  #   ports:
+  #     - 80:80
+  #     - 443:443
+  #     - 81:81
+  #   volumes:
+  #     - ./config/npm/data:/data
+  #     - ./config/npm/ssl:/etc/letsencrypt
+  #   restart: always
+  #   depends_on:
+  #     - npm_db
+  #
+  # npm_db:
+  #   image: "jc21/mariadb-aria:latest"
+  #   container_name: npm_db
+  #   environment:
+  #     MYSQL_ROOT_PASSWORD: "npm"
+  #     MYSQL_DATABASE: "npm"
+  #     MYSQL_USER: "npm"
+  #     MYSQL_PASSWORD: "npm"
+  #   volumes:
+  #     - ./config/npm/db:/var/lib/mysql
+
+
+volumes:
+  watchcon_db:
+
+networks:
+  proxy_network:
+    external: true
