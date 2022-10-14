@@ -7,6 +7,20 @@ volumes:
   db-data:
 
 services:
+  express:
+    build: .
+    container_name: express
+    restart: always
+    volumes:
+      - ../WEB(FE)/:/data/watchcon/app/web # debug bind
+      #- ./:/data/watchcon/app # debug bind
+    networks:
+      - default
+      - proxy_network
+    # Release options
+    # ports:
+    #   - 80:8080
+
   database:
     image: mariadb
     container_name: database
@@ -17,7 +31,7 @@ services:
       - MYSQL_ALLOW_EMPTY_PASSWORD=true
 
   phpmyadmin:
-    image: phpmyadmin/phpmyadmin
+    image: phpmyadmin
     container_name: phpmyadmin
     environment:
       - PMA_HOST=database
@@ -27,3 +41,6 @@ services:
     networks:
       - default
       - proxy_network
+    # Release options
+    # ports:
+    #   - 8080:80
