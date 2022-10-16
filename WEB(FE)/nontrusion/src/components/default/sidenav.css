@@ -9,10 +9,9 @@
 
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
-    width: 80%;
+    width: auto;
     height: 60px;
-    margin: auto;
-    margin-bottom: 5px;
+    margin: 5px;
     color: #fff;
     border-radius: 15px;
     background-color: #5a6b8c;

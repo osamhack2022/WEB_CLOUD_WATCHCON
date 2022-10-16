@@ -4,7 +4,7 @@ import UserDropdown from './UserDropdown';
 import { ReactComponent as Logo } from '../../static/image/logo.svg';
 import './sidenav.css';
 
-const SideNav = () => {
+const SideNav = ({ selected }) => {
     return (
         <div
             className="d-flex flex-column flex-shrink-0 p-3"
@@ -22,27 +22,57 @@ const SideNav = () => {
             <hr />
             <Nav className="nav-pills flex-column mb-auto">
                 <Nav.Item>
-                    <Nav.Link href="#" className="active" aria-current="page">
+                    <Nav.Link
+                        href="/dashboard"
+                        className={selected === 'dashboard' ? 'active' : null}
+                    >
                         대시보드
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#">서버클러스터</Nav.Link>
+                    <Nav.Link
+                        href="/cluster"
+                        className={selected === 'cluster' ? 'active' : null}
+                    >
+                        서버클러스터
+                    </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#">로그 분석</Nav.Link>
+                    <Nav.Link
+                        href="/analyze-log"
+                        className={selected === 'analyze-log' ? 'active' : null}
+                    >
+                        로그 분석
+                    </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#">노드 관리</Nav.Link>
+                    <Nav.Link
+                        href="/manage-node"
+                        className={selected === 'manage-node' ? 'active' : null}
+                    >
+                        서버 관리
+                    </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#">웹서비스 관리</Nav.Link>
+                    <Nav.Link
+                        href="/manage-web"
+                        className={selected === 'manage-web' ? 'active' : null}
+                    >
+                        웹서비스 관리
+                    </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#">보고서</Nav.Link>
+                    <Nav.Link href="/report" className={selected === 'report' ? 'active' : null}>
+                        보고서
+                    </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="#">체계 관리</Nav.Link>
+                    <Nav.Link
+                        href="/manage-system"
+                        className={selected === 'manage-system' ? 'active' : null}
+                    >
+                        체계 관리
+                    </Nav.Link>
                 </Nav.Item>
             </Nav>
             <hr />

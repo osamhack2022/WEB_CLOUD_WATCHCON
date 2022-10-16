@@ -19,6 +19,7 @@ import { Line } from 'react-chartjs-2';
 
 ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Legend);
 const options = {
+    maintainAspectRatio: false,
     responsive: true,
     interaction: {
         mode: 'index',

@@ -7,13 +7,13 @@ const NodeListSection = ({ selectedCluster, nodeList, nodeState }) => {
     let information = (selected) => {
         switch (selected) {
             case 'node-normal':
-                return '정상 노드';
+                return '정상 서버';
             case 'node-warning':
-                return '주의를 요하는 노드';
+                return '주의를 요하는 서버';
             case 'node-danger':
-                return '위험 노드';
+                return '위험 서버';
             case 'node-stop':
-                return '중단된 노드';
+                return '중단된 서버';
             default:
                 throw new Error('information() : Unexpected Property');
         }
@@ -23,7 +23,7 @@ const NodeListSection = ({ selectedCluster, nodeList, nodeState }) => {
     return (
         <section>
             <h4>
-                <b>"{information(selectedCluster)}"</b> 그룹의 노드 {nodeList.length}개
+                <b>"{information(selectedCluster)}"</b> 그룹의 서버 {nodeList.length}개
             </h4>
             <NodeList nodeList={nodeList} setting={setSelectedNodeId} selected={selectedNodeId} />
         </section>

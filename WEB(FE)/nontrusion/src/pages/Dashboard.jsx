@@ -1,6 +1,6 @@
 import React from 'react';
-import SideNav from './default/SideNav';
-import DashboardView from './dashboard/DashboardView';
+import SideNav from '../components/default/SideNav';
+import DashboardView from '../components/dashboard/DashboardView';
 import { Container, Row, Col } from 'react-bootstrap';
 
 const Dashboard = () => {
@@ -15,7 +15,7 @@ const Dashboard = () => {
                             padding: '0',
                         }}
                     >
-                        <SideNav />
+                        <SideNav selected={'dashboard'} />
                     </Col>
                     <Col
                         id="page-content-wrapper"

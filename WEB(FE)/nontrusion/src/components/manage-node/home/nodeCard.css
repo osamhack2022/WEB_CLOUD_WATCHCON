@@ -1,0 +1,51 @@
+.node-usage-bar {
+    background-color: #3f5573;
+}
+
+.node-detail-up {
+    color: #24e32b;
+}
+
+.node-detail-down {
+    color: red;
+}
+
+.node-detail-sub-text {
+    color: #6878a6;
+    opacity: 0.7;
+}
+
+.node-detail-error-code {
+    color: #9ba7bf;
+    margin-left: 50px;
+}
+
+.node-card {
+    border: 2px solid #5a68bc !important;
+}
+
+.node-name {
+    color: #6878a6;
+}
+
+.normal-usage {
+    color: #24e32b;
+}
+
+.high-usage {
+    color: red;
+}
+
+.unused {
+    opacity: 0.3;
+}
+
+.add-node-card {
+    border: 2px dashed #6878a6 !important;
+    opacity: 0.5;
+    height: 253.19px;
+}
+
+.add-server-button {
+    color: #6878a6;
+}

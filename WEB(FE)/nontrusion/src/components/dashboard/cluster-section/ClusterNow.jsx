@@ -13,25 +13,25 @@ const ClusterNow = (props) => {
             case 'node-normal':
                 return (
                     <>
-                        <CheckCircleFill /> &nbsp;정상 노드
+                        <CheckCircleFill /> &nbsp;정상 서버
                     </>
                 );
             case 'node-warning':
                 return (
                     <>
-                        <ExclamationTriangle /> &nbsp;주의를 요하는 노드
+                        <ExclamationTriangle /> &nbsp;주의를 요하는 서버
                     </>
                 );
             case 'node-danger':
                 return (
                     <>
-                        <ExclamationTriangleFill /> &nbsp;위험 노드
+                        <ExclamationTriangleFill /> &nbsp;위험 서버
                     </>
                 );
             case 'node-stop':
                 return (
                     <>
-                        <StopCircleFill /> &nbsp;중단된 노드
+                        <StopCircleFill /> &nbsp;중단된 서버
                     </>
                 );
             default:
