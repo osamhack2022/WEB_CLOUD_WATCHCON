@@ -17,30 +17,46 @@ services:
     networks:
       - default
       - proxy_network
+    environment:
+      - PORT=3000
+      - DB_HOST=mysql
+      - DB_USER=root
+      - DB_PASSWORD=watchcon
+      - DB_NAME=watchcon
+      - DB_PORT=3306
+
     # Release options
     # ports:
     #   - 80:8080
 
-  database:
-    image: mariadb
-    container_name: database
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
     volumes:
       - db-data:/var/lib/mysql
-    restart: always
-    environment:
-      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+    environment: 
+      - MYSQL_ROOT_PASSWORD=watchconroot
+      - MYSQL_DATABASE=watchcon_db
+      - MYSQL_USER=watchon_user
+      - MYSQL_PASSWORD=watchon_password
 
   phpmyadmin:
     image: phpmyadmin
     container_name: phpmyadmin
     environment:
-      - PMA_HOST=database
+      - PMA_HOST=mysql
+      - PMA_PORT=3306
+      - PMA_USER=root
+      - PMA_PASSWORD=watchconroot
+      - PMA_ARBITRARY=1
     restart: always
     volumes:
       - /sessions
     networks:
       - default
       - proxy_network
+    links:
+      - mysql
     # Release options
     # ports:
     #   - 8080:80
