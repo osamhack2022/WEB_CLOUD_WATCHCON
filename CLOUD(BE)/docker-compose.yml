@@ -13,7 +13,7 @@ services:
     restart: always
     volumes:
       - ../WEB(FE)/:/data/watchcon/app/web # development bind
-      - ./:/data/watchcon/app # development bind
+      - ../WEB(BE)/:/data/watchcon/app # development bind
     networks:
       - default
       - proxy_network
