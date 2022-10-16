@@ -7,6 +7,58 @@
     flex-direction: column;
 }
 
+.sub-nav-menu-events {
+    display: none;
+    margin-left: 5%;
+}
+
+.master-nav-menu-analyze-log:hover + .sub-nav-menu-events {
+    display: block;
+}
+
+.sub-nav-menu-events:hover {
+    display: block;
+}
+
+.sub-nav-menu-add-node {
+    display: none;
+    margin-left: 5%;
+}
+
+.master-nav-menu-manage-node:hover + .sub-nav-menu-add-node {
+    display: block;
+}
+
+.sub-nav-menu-add-node:hover {
+    display: block;
+}
+
+.sub-nav-menu-add-service {
+    display: none;
+    margin-left: 5%;
+}
+
+.master-nav-menu-manage-service:hover + .sub-nav-menu-add-service {
+    display: block;
+}
+
+.sub-nav-menu-add-service:hover {
+    display: block;
+}
+
+.sub-nav-menu-add-user {
+    display: none;
+    margin-left: 5%;
+}
+
+.master-nav-menu-manage-system:hover + .sub-nav-menu-add-user {
+    display: block;
+}
+
+.sub-nav-menu-add-user:hover {
+    display: block;
+}
+
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
     width: auto;
