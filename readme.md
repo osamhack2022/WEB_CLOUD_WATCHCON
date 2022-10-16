@@ -4,6 +4,10 @@
 ## 프로젝트 소개
 - To-Be-Added
 
+### Why?
+
+### 개요 
+
 
 ## 기능 설명
  - To-Be-Added
