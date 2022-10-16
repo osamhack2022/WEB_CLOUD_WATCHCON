@@ -5,7 +5,8 @@
   "author": "admin@nontrusion.kr",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon"
   },
   "dependencies": {
     "express": "^4.18.2",
