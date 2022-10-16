@@ -7,23 +7,37 @@ volumes:
   db-data:
 
 services:
-  express:
-    build: .
-    container_name: express
+  web:
+    image: nginx:latest
+    container_name: web
     restart: always
     volumes:
-      - ../WEB(FE)/:/data/watchcon/app/web # development bind
-      - ../WEB(BE)/:/data/watchcon/app # development bind
+      - ./config/nginx.conf:/etc/nginx/nginx.conf
+      - ../WEB(FE)/build:/usr/share/nginx/html
+
+  server:
+    build:
+      context: ../WEB(BE)
+      dockerfile: Dockerfile
+    container_name: server
+    restart: always
+    volumes:
+      - "../WEB(BE):/app"
+      - /app/node_modules
     networks:
       - default
       - proxy_network
     environment:
+      - NODE_ENV=development
+      - CHOKIDAR_USEPOLLING=true
       - PORT=3000
       - DB_HOST=mysql
       - DB_USER=root
       - DB_PASSWORD=watchcon
       - DB_NAME=watchcon
       - DB_PORT=3306
+    stdin_open: true
+    tty: true
 
     # Release options
     # ports:
