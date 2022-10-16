@@ -9,7 +9,7 @@ import {
 } from 'react-bootstrap-icons';
 import './nodeListTable.css';
 
-const NodeListTable = ({ setting, nodeList }) => {
+const NodeListTable = ({ nodeList }) => {
     return (
         <Table class="align-middle mb-0 bg-white">
             <thead>
@@ -126,10 +126,8 @@ const NodeListTable = ({ setting, nodeList }) => {
 
                 <tr>
                     <td className="text-center" colspan="6">
-                        <button
-                            onClick={() => {
-                                setting('add-node');
-                            }}
+                        <a
+                            href="/add-node"
                             style={{
                                 backgroundColor: 'transparent',
                                 margin: 0,
@@ -142,7 +140,7 @@ const NodeListTable = ({ setting, nodeList }) => {
                                 <PlusCircle />
                                 <b>&nbsp;&nbsp;서버 추가하기</b>
                             </h5>
-                        </button>
+                        </a>
                     </td>
                 </tr>
             </tbody>

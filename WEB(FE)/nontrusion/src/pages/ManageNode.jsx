@@ -6,7 +6,6 @@ import Head from '../components/manage-node/Head';
 import CardView from './manage-node/CardView'; // default
 import ListView from './manage-node/ListView';
 import NodeDetail from './manage-node/NodeDetail';
-import AddNode from './manage-node/AddNode';
 
 import getNodeList from '../components/manage-node/getNodeList';
 
@@ -42,8 +41,6 @@ const PageSelect = ({ selected }) => {
             );
         case 'node-detail':
             return <NodeDetail setting={setting} />;
-        case 'add-node':
-            return <AddNode setting={setting} />;
         default:
             return null;
     }

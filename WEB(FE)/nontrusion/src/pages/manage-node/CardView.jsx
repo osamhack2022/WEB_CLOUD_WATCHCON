@@ -16,7 +16,7 @@ const CardView = ({ setting, nodeList }) => {
             })}
 
             <Col xl={4} lg={6} xs={12}>
-                <AddNodeCard setting={setting} />
+                <AddNodeCard />
             </Col>
         </Row>
     );

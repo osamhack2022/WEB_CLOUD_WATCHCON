@@ -44,7 +44,9 @@ const SideNav = ({ selected }) => {
                         <ChevronDown />
                     </Nav.Link>
                 </Nav.Item>
-                <Nav.Item className="sub-nav-menu-events">
+                <Nav.Item
+                    className={selected === 'events' ? 'selected-sub-menu' : 'sub-nav-menu-events'}
+                >
                     <Nav.Link href="/events" className={selected === 'events' ? 'active' : null}>
                         주요 위협 이벤트
                     </Nav.Link>
@@ -58,7 +60,11 @@ const SideNav = ({ selected }) => {
                         <ChevronDown />
                     </Nav.Link>
                 </Nav.Item>
-                <Nav.Item className="sub-nav-menu-add-node">
+                <Nav.Item
+                    className={
+                        selected === 'add-node' ? 'selected-sub-menu' : 'sub-nav-menu-add-node'
+                    }
+                >
                     <Nav.Link
                         href="/add-node"
                         className={selected === 'add-node' ? 'active' : null}
@@ -68,14 +74,20 @@ const SideNav = ({ selected }) => {
                 </Nav.Item>
                 <Nav.Item className="master-nav-menu-manage-service">
                     <Nav.Link
-                        href="/manage-web"
-                        className={selected === 'manage-web' ? 'active' : null}
+                        href="/manage-service"
+                        className={selected === 'manage-service' ? 'active' : null}
                     >
                         웹서비스 관리&nbsp;
                         <ChevronDown />
                     </Nav.Link>
                 </Nav.Item>
-                <Nav.Item className="sub-nav-menu-add-service">
+                <Nav.Item
+                    className={
+                        selected === 'add-service'
+                            ? 'selected-sub-menu'
+                            : 'sub-nav-menu-add-service'
+                    }
+                >
                     <Nav.Link
                         href="/add-service"
                         className={selected === 'add-service' ? 'active' : null}
@@ -97,7 +109,11 @@ const SideNav = ({ selected }) => {
                         <ChevronDown />
                     </Nav.Link>
                 </Nav.Item>
-                <Nav.Item className="sub-nav-menu-add-user">
+                <Nav.Item
+                    className={
+                        selected === 'add-user' ? 'selected-sub-menu' : 'sub-nav-menu-add-user'
+                    }
+                >
                     <Nav.Link
                         href="/add-user"
                         className={selected === 'add-user' ? 'active' : null}

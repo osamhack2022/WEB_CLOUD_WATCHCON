@@ -59,11 +59,16 @@
     display: block;
 }
 
+.selected-sub-menu {
+    margin-left: 5%;
+}
+
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
     width: auto;
     height: 60px;
     margin: 5px;
+    margin-left: 5%;
     color: #fff;
     border-radius: 15px;
     background-color: #5a6b8c;
