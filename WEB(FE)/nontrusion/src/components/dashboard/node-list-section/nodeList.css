@@ -1,0 +1,21 @@
+.node-list {
+    color: #6878a6;
+}
+
+.node-list-sub-text {
+    opacity: 0.5;
+}
+
+.node-list-btn {
+    background-color: transparent;
+    border: none;
+    text-align: left !important;
+}
+
+.node-selected {
+    background-color: #6878a6;
+}
+
+.node-list-selected {
+    color: #cedef2;
+}

@@ -1,0 +1,42 @@
+.node-detail-up {
+    color: #24e32b;
+}
+
+.node-detail-down {
+    color: red;
+}
+
+.detail-error-count {
+    color: red;
+}
+
+.node-detail-sub-text {
+    color: #5a6b8c;
+}
+
+.node-detail-error-code {
+    color: #9ba7bf;
+    margin-left: 50px;
+}
+
+hr {
+    border-top: 1px solid #cedef2;
+}
+
+.node-detail-seemore {
+    color: #6878a6;
+}
+
+.info-line {
+    width: 100%;
+    height: 20px;
+    border-bottom: 2px solid #3f5573;
+    text-align: left;
+}
+
+.info-line-text {
+    font-size: 25px;
+    color: #3f5573;
+    background-color: #fff;
+    padding: 0 10px 0 0;
+}

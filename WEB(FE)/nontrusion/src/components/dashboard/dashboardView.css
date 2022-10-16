@@ -1,0 +1,21 @@
+.container {
+    max-width: 95%;
+}
+
+.cluster-now-card {
+    background: #cedef2;
+    height: 130px;
+}
+
+.cluster-now-btn {
+    background-color: transparent;
+    border: none;
+}
+
+.info-text {
+    color: #3f5573;
+}
+
+.message-to-click {
+    color: #3f5573;
+}

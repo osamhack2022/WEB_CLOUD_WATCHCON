@@ -1,0 +1,39 @@
+.nav-pills .nav-link {
+    background-color: transparent;
+    margin: 5px;
+    color: #fff;
+    font-size: 18px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    width: 80%;
+    height: 60px;
+    margin: auto;
+    margin-bottom: 5px;
+    color: #fff;
+    border-radius: 15px;
+    background-color: #5a6b8c;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.dropdown {
+    justify-content: center;
+}
+
+.btn-primary {
+    background-color: transparent;
+    margin: 10px;
+    justify-content: center;
+}
+
+.name-space {
+    color: #cedef2;
+    font-size: 18px;
+    width: 80%;
+}
