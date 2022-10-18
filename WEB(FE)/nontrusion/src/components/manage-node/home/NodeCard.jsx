@@ -10,9 +10,17 @@ import {
 } from 'react-bootstrap-icons';
 import './nodeCard.css';
 
-const NodeCard = ({ node }) => {
+const NodeCard = ({ setting, select, node }) => {
     return (
-        <Card className="mb-4 border node-card shadow-none">
+        <Card
+            className="mb-4 border node-card shadow-none"
+            onClick={() => {
+                if (node.activation) {
+                    setting('node-detail');
+                    select(node.id);
+                }
+            }}
+        >
             <Card.Body>
                 <div class="d-flex justify-content-between px-md-1">
                     <Row className="mb-2">

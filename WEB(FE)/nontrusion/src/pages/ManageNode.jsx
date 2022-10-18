@@ -11,8 +11,9 @@ import getNodeList from '../components/manage-node/getNodeList';
 
 import { Container, Row, Col } from 'react-bootstrap';
 
-const PageSelect = ({ selected }) => {
+const PageSelect = ({ selected, nodeSelected }) => {
     const [view, setting] = selected;
+    const [selectedNode, setSelectedNode] = nodeSelected;
 
     switch (view) {
         case 'card-view':
@@ -24,7 +25,11 @@ const PageSelect = ({ selected }) => {
                             setting('list-view');
                         }}
                     />
-                    <CardView setting={setting} nodeList={getNodeList()} />
+                    <CardView
+                        setting={setting}
+                        selectDetailView={setSelectedNode}
+                        nodeList={getNodeList()}
+                    />
                 </>
             );
         case 'list-view':
@@ -36,18 +41,30 @@ const PageSelect = ({ selected }) => {
                             setting('card-view');
                         }}
                     />
-                    <ListView setting={setting} nodeList={getNodeList()} />
+                    <ListView
+                        setting={setting}
+                        selectDetailView={setSelectedNode}
+                        nodeList={getNodeList()}
+                    />
                 </>
             );
         case 'node-detail':
-            return <NodeDetail setting={setting} />;
+            return (
+                <NodeDetail
+                    backAction={() => {
+                        setting('card-view');
+                    }}
+                    selected={selectedNode}
+                />
+            );
         default:
             return null;
     }
 };
 
 const ManageNode = () => {
-    const selected = useState('card-view');
+    const pageSelected = useState('card-view');
+    const nodeSelected = useState(0);
 
     return (
         <>
@@ -69,7 +86,7 @@ const ManageNode = () => {
                         }}
                     >
                         <Container className="pt-4">
-                            <PageSelect selected={selected} />
+                            <PageSelect selected={pageSelected} nodeSelected={nodeSelected} />
                         </Container>
                     </Col>
                 </Row>

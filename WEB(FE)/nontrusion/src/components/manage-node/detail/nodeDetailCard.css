@@ -1,0 +1,26 @@
+.node-detail-card {
+    background-color: #cedef2;
+}
+
+.info-text {
+    color: #3f5573;
+}
+
+.value-text {
+    color: #3f5573;
+}
+
+.name-text-muted {
+    color: #3f5573;
+    opacity: 0.5;
+}
+
+.usage-text-danger {
+    color: red;
+    opacity: 0.5;
+}
+
+.usage-text {
+    color: #3f5573;
+    opacity: 0.5;
+}

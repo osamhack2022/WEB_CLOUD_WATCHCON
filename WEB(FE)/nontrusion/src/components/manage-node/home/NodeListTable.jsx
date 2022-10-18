@@ -9,7 +9,7 @@ import {
 } from 'react-bootstrap-icons';
 import './nodeListTable.css';
 
-const NodeListTable = ({ nodeList }) => {
+const NodeListTable = ({ setting, select, nodeList }) => {
     return (
         <Table class="align-middle mb-0 bg-white">
             <thead>
@@ -49,7 +49,12 @@ const NodeListTable = ({ nodeList }) => {
             <tbody>
                 {nodeList.map((node) => {
                     return (
-                        <tr>
+                        <tr
+                            onClick={() => {
+                                setting('node-detail');
+                                select(node.id);
+                            }}
+                        >
                             <td>
                                 <h5 class="node-detail-sub-text mb-0">
                                     <b>{node.group}</b>
