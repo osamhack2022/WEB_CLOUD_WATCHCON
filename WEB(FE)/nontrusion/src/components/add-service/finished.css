@@ -1,0 +1,60 @@
+.add-service-success-card-subtitle {
+    color: #6878a6;
+    opacity: 0.5;
+    font-size: 25px;
+}
+
+.add-service-success-card-title {
+    color: #6878a6;
+    font-size: 35px;
+}
+
+.add-service-success-description {
+    font-size: 20;
+    color: #6878a6;
+    opacity: 0.5;
+}
+
+.add-service-success-head {
+    padding-left: 25px;
+}
+
+.add-service-success-detail {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.service-card {
+    border: 2px solid #5a68bc !important;
+}
+
+.card-hr {
+    border-top: 1.5px solid #6878a6;
+}
+
+.add-service-success-detail-table-head {
+    width: 150px;
+    font-size: 20px;
+    color: #000;
+}
+
+.add-service-success-detail-table-value {
+    font-size: 20px;
+    color: #bfbfbd;
+}
+
+.text-green {
+    color: #319e50;
+}
+
+.message {
+    font-size: 45px;
+    color: #000;
+}
+
+.next-button {
+    border-radius: 25px;
+    background-color: #3f5573;
+    color: #cedef2;
+    font-size: 30px;
+}
