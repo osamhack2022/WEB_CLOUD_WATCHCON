@@ -1,84 +1,126 @@
 import React from 'react';
-import { Form, Row, Col } from 'react-bootstrap';
+import { Form, Button, Row, Col } from 'react-bootstrap';
+import './addNodeForm.css';
 
 const AddNodeFrom = () => {
     return (
-        <Form>
-            <Row class="mb-4">
+        <Form className="add-node-form">
+            <Row className="mb-5">
                 <Col>
-                    <div class="form-outline">
-                        <input type="text" id="form6Example1" class="form-control" />
-                        <label class="form-label" for="form6Example1">
-                            서버 관리 별칭
-                        </label>
-                    </div>
+                    <Form.Group>
+                        <Form.Label>서버 별칭</Form.Label>
+                        <Form.Control
+                            type="text"
+                            id="serverName"
+                            className="text-input-field"
+                            placeholder="서버 관리 별칭"
+                        />
+                    </Form.Group>
                 </Col>
                 <Col>
-                    <div class="form-outline">
-                        <input type="text" id="form6Example2" class="form-control" />
-                        <label class="form-label" for="form6Example2">
-                            서버 그룹 선택
-                        </label>
-                    </div>
-                </Col>
-            </Row>
-
-            <Row class="mb-4">
-                <Col>
-                    <div class="form-outline">
-                        <input type="text" id="form6Example3" class="form-control" />
-                        <label class="form-label" for="form6Example3">
-                            IP 주소
-                        </label>
-                    </div>
-                </Col>
-                <Col>
-                    <div class="form-outline">
-                        <input type="text" id="form6Example4" class="form-control" />
-                        <label class="form-label" for="form6Example4">
-                            DNS 주소
-                        </label>
-                    </div>
+                    <Form.Group>
+                        <Form.Label>서버 관리 그룹</Form.Label>
+                        <Form.Select
+                            id="serverGroup"
+                            className="select-option-field"
+                            aria-label="server-management-group"
+                        >
+                            <option>서버 그룹 선택</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </Form.Select>
+                    </Form.Group>
                 </Col>
             </Row>
 
-            <Row class="mb-4">
+            <Row className="mb-5">
                 <Col>
-                    <div class="form-outline">
-                        <input type="text" id="form6Example5" class="form-control" />
-                        <label class="form-label" for="form6Example5">
-                            호스트 이름 (Hostname)
-                        </label>
-                    </div>
+                    <Form.Group>
+                        <Form.Label>IP 주소</Form.Label>
+                        <Form.Control
+                            type="text"
+                            id="ipAdress"
+                            className="text-input-field"
+                            placeholder="IP 주소"
+                        />
+                    </Form.Group>
                 </Col>
                 <Col>
-                    <div class="form-outline">
-                        <input type="text" id="form6Example6" class="form-control" />
-                        <label class="form-label" for="form6Example6">
-                            서비스 선택
-                        </label>
-                    </div>
-                </Col>
-                <Col>
-                    <div class="form-outline">
-                        <input type="text" id="form6Example7" class="form-control" />
-                        <label class="form-label" for="form6Example7">
-                            운영체제 선택
-                        </label>
-                    </div>
+                    <Form.Group>
+                        <Form.Label>DNS 주소</Form.Label>
+                        <Form.Control
+                            type="text"
+                            id="dnsAdress"
+                            className="text-input-field"
+                            placeholder="DNS 주소"
+                        />
+                    </Form.Group>
                 </Col>
             </Row>
 
-            <div class="form-outline mb-4">
-                <textarea class="form-control" id="form6Example8" rows="4"></textarea>
-                <label class="form-label" for="form6Example8">
-                    주석
-                </label>
+            <Row className="mb-5">
+                <Col>
+                    <Form.Group>
+                        <Form.Label>호스트 이름 (Hostname)</Form.Label>
+                        <Form.Control
+                            type="text"
+                            id="hostName"
+                            className="text-input-field"
+                            placeholder="호스트 이름 (Hostname)"
+                        />
+                    </Form.Group>
+                </Col>
+                <Col>
+                    <Form.Group>
+                        <Form.Label>서비스</Form.Label>
+                        <Form.Select
+                            id="service"
+                            className="select-option-field"
+                            aria-label="service"
+                        >
+                            <option>서비스 선택</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </Form.Select>
+                    </Form.Group>
+                </Col>
+                <Col>
+                    <Form.Group>
+                        <Form.Label>운영체제</Form.Label>
+                        <Form.Select
+                            id="os"
+                            className="select-option-field"
+                            aria-label="operator-system"
+                        >
+                            <option>운영체제 선택</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </Form.Select>
+                    </Form.Group>
+                </Col>
+            </Row>
+
+            <div className="form-outline mb-5">
+                <Form.Group>
+                    <Form.Label>주석</Form.Label>
+                    <Form.Control
+                        as="textarea"
+                        id="annotation"
+                        className="textarea-input-field"
+                        placeholder="주석"
+                        rows={4}
+                    />
+                </Form.Group>
             </div>
 
-            <button type="submit" class="btn btn-primary btn-block mb-4">
-                모니터링 서버 추가하기
-            </button>
+            <Row>
+                <Button type="submit" className="submit-button text-start">
+                    모니터링 서버 추가하기
+                </Button>
+            </Row>
         </Form>
     );
 };
