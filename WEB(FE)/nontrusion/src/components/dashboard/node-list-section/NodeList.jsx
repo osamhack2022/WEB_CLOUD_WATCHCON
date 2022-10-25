@@ -8,7 +8,10 @@ const NodeList = ({ nodeList, setting, selected }) => {
         <section>
             {nodeList.map((node) => {
                 return (
-                    <Card className={selected === node.id ? 'mb-4 node-selected' : 'mb-4'}>
+                    <Card
+                        key={node.id}
+                        className={selected === node.id ? 'mb-4 node-selected' : 'mb-4'}
+                    >
                         <button
                             className="node-list-btn"
                             onClick={() => {
@@ -35,9 +38,11 @@ const NodeList = ({ nodeList, setting, selected }) => {
                                         style={{ padding: 'auto' }}
                                     >
                                         <h6 className="card-subtitle mb-2 node-list-sub-text">
-                                            {node.classification}
+                                            <b>{node.classification}</b>
                                         </h6>
-                                        <h4 className="card-title">{node.name}</h4>
+                                        <h4 className="card-title">
+                                            <b>{node.name}</b>
+                                        </h4>
                                     </Col>
                                 </Row>
                             </Card.Body>

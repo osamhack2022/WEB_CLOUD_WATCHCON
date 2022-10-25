@@ -52,9 +52,11 @@ const ClusterNow = (props) => {
                             </h5>
                         </div>
                     </div>
-                    <Card.Footer className="mb-0 info-value text-end">
-                        <h2>{props.value}</h2>
-                    </Card.Footer>
+                    <div className="mb-0 info-value text-end">
+                        <h2>
+                            <b>{props.value}</b>
+                        </h2>
+                    </div>
                 </Card.Body>
             </button>
         </Card>

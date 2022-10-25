@@ -67,8 +67,11 @@ const NodeList = ({ selected, nodeState }) => {
                     nodeState={[selectedNodeId, setSelectedNodeId]}
                 />
             </Col>
-            <Col xl={8} md={12}>
-                {selectedNodeId === 'none' ? null : <NodeDetail selected={selectedNodeId} />}
+            <Col>
+                {selectedNodeId === 'none' || <div className="vr" style={{ height: '100%' }}></div>}
+            </Col>
+            <Col xl={7} md={12}>
+                {selectedNodeId === 'none' || <NodeDetail selected={selectedNodeId} />}
             </Col>
         </Row>
     );

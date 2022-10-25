@@ -5,7 +5,7 @@ const NodeError = ({ errors }) => {
     return (
         <>
             {errors.map((error) => (
-                <div>
+                <div key={error.code}>
                     <h5 className="detail-error-count">
                         <ExclamationCircleFill
                             fill="red"
@@ -15,7 +15,9 @@ const NodeError = ({ errors }) => {
                         <b>{error.message}</b>
                     </h5>
                     <div className="node-detail-error-code">
-                        <p>{error.code}</p>
+                        <p>
+                            <b>{error.code}</b>
+                        </p>
                     </div>
                     <hr />
                 </div>

@@ -70,7 +70,7 @@ const NodeDetailSection = ({ nodeDetail }) => {
                             <div className={nodeState ? 'node-detail-up' : 'node-detail-down'}>
                                 <h5>
                                     {nodeState ? <ArrowUpCircle /> : <ArrowDownCircle />}
-                                    &nbsp;{nodeState ? 'UP' : 'DOWN'}
+                                    &nbsp;<b>{nodeState ? 'UP' : 'DOWN'}</b>
                                 </h5>
                             </div>
                         </div>
@@ -78,7 +78,7 @@ const NodeDetailSection = ({ nodeDetail }) => {
                     <Col className="node-detail mt-2" style={{ padding: 'auto' }}>
                         <div style={{ height: '80px' }}>
                             <h4 className="card-subtitle mb-2 node-detail-sub-text">
-                                {nodeClassification}
+                                <b>{nodeClassification}</b>
                             </h4>
                             <h2 className="card-title">
                                 <b>{nodeName}</b>
@@ -123,7 +123,9 @@ const NodeDetailSection = ({ nodeDetail }) => {
                         <div className="col-md-6">
                             <div className="panel panel-default">
                                 <div className="panel-heading">
-                                    <h3>CPU</h3>
+                                    <h3>
+                                        <b>CPU</b>
+                                    </h3>
                                 </div>
                                 <div className="panel-body">
                                     <Line options={options} data={formData(cpuUsage)} />
@@ -133,7 +135,9 @@ const NodeDetailSection = ({ nodeDetail }) => {
                         <div className="col-md-6">
                             <div className="panel panel-default">
                                 <div className="panel-heading">
-                                    <h3>RAM</h3>
+                                    <h3>
+                                        <b>RAM</b>
+                                    </h3>
                                 </div>
                                 <div className="panel-body">
                                     <Line options={options} data={formData(memoryUsage)} />
