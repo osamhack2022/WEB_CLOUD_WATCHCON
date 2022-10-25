@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
+
 import SideNav from '../components/default/SideNav';
+import Head from '../components/report/Head';
+import ReportTable from '../components/report/ReportTable';
+
+import getReports from '../components/report/getReports';
 
 const Report = () => {
+    const [view, setView] = useState('daily');
+
     return (
         <>
             <Container fluid>
@@ -22,7 +29,10 @@ const Report = () => {
                             padding: '0',
                         }}
                     >
-                        <Container className="pt-4">Report Page</Container>
+                        <Container className="pt-4">
+                            <Head selected={view} setView={setView} />
+                            <ReportTable reports={getReports(view)} />
+                        </Container>
                     </Col>
                 </Row>
             </Container>

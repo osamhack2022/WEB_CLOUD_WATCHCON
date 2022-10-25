@@ -1,0 +1,26 @@
+.report-table-head {
+    font-size: 20px;
+    color: #5a6b8c;
+}
+
+.report-table-text {
+    font-size: 18px;
+    color: #000;
+}
+
+.lookup-button {
+    color: #6878a6;
+    opacity: 0.5;
+}
+
+.report-open-button {
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 205px;
+    border-radius: 12px;
+    border: 0;
+    background-color: #cedef2;
+    color: #3f5573;
+}
