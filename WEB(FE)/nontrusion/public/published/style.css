@@ -1,0 +1,546 @@
+body {}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Bold.woff') format('woff');
+    font-style: normal;
+}
+
+/*
+로그인 페이지 style / index.html
+*/
+
+.login-container {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+
+    position: absolute;
+    width: 33vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+@media (max-width: 1100px) {
+    .login-container {
+        width: 100vw;
+    }
+}
+
+.login-background-img {
+    position: absolute;
+    width: 67vw;
+    height: 100vh;
+    left: 33vw;
+    top: 0;
+
+    background: url(img/background.png);
+    background-size: cover;
+}
+
+@media (max-width: 1100px) {
+    .login-background-img {
+        width: 0vw;
+    }
+}
+
+.login-container>.login-logo-container {
+    position: absolute;
+    width: 72.7%;
+    max-width: 500px;
+    height: 13%;
+    top: 10%;
+    left: 15%;
+}
+
+.login-logo-img {
+    position: absolute;
+    width: 66.5%;
+    top: 0;
+    padding-top: 8%;
+
+    background: url(img/logo.png);
+    background-size: cover;
+}
+
+.login-logo-text {
+    position: absolute;
+    width: 100%;
+    height: 56.6%;
+    bottom: 0;
+
+    font-size: 60px;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+
+    color: #000000;
+}
+
+@media (max-width: 1356px) {
+    .login-logo-text {
+        font-size: 55px;
+    }
+}
+
+@media (max-width: 1244px) {
+    .login-logo-text {
+        font-size: 47px;
+    }
+}
+
+.login-warning-msg {
+    position: absolute;
+    width: 72.7%;
+    height: 4%;
+    left: 15%;
+    top: 36%;
+
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+
+    color: #7790A6;
+}
+
+.loginForm {
+    position: absolute;
+    width: 70%;
+    max-width: 400px;
+    height: 37%;
+    left: 15%;
+    bottom: 13%;
+}
+
+.loginForm>input,
+.loginForm>button {
+    padding-left: 8.5%;
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.loginForm>.loginForm-id {
+    position: absolute;
+    width: 100%;
+    height: 21.7%;
+
+    color: #5A6B8C;
+    border: 3px solid #3F5573;
+    border-radius: 25px;
+}
+
+.loginForm>.loginForm-pw {
+    position: absolute;
+    width: 100%;
+    height: 21.7%;
+    top: 26.2%;
+
+    color: #5A6B8C;
+    border: 3px solid #3F5573;
+    border-radius: 25px;
+}
+
+.loginForm>.loginForm-btn {
+    position: absolute;
+    width: 100%;
+    height: 21.7%;
+    color: #CEDEF2;
+    top: 315px;
+    text-align: left;
+
+    background: #3F5573;
+    border: 3px solid #3F5573;
+    border-radius: 25px;
+}
+
+/*
+start.html / startSetting.html
+*/
+
+.start {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+}
+
+.start>.start-logo-container {
+    position: absolute;
+    width: 46.8vw;
+    height: 12.2vh;
+    left: 26.6vw;
+    top: 30.8vh;
+}
+
+@media (max-width: 1023px) {
+
+    /* 여기 좀 더 손봐야함 커졌다 작아졌다 함 불편한 요소 */
+    .start>.start-logo-container {
+        width: 52vw;
+        left: 24vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .start>.start-logo-container {
+        width: 70vw;
+        left: 15vw;
+    }
+}
+
+@media (max-width: 639px) {
+    .start>.start-logo-container {
+        width: 80vw;
+        left: 10vw;
+    }
+}
+
+.start-logo-container>.start-logo {
+    width: 100%;
+    height: 0;
+    padding-top: 13.3%;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: url(img/logo.png);
+    background-size: cover;
+}
+
+.start-btn-container {
+    position: absolute;
+    width: 25vw;
+    min-height: 50px;
+    height: calc(25vw / 5.54);
+    left: 37.78vw;
+    top: 67.7vh;
+}
+
+@media (max-width: 1500px) {
+    .start-btn-container {
+        height: calc(25vw / 5);
+    }
+}
+
+.start-btn-container>button {
+    /* font-size must to be resized*/
+    padding-left: 6.6%;
+    background: #3F5573;
+    border: 3px solid #3F5573;
+    border-radius: 25px;
+    color: #CEDEF2;
+    text-align: left;
+
+    font-family: 'Pretendard';
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 1146px) {
+    .start-btn-container>button {
+        font-size: 21px;
+    }
+}
+
+@media (max-width: 970px) {
+    .start-btn-container>button {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 794px) {
+    .start-btn-container>button {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 639px) {
+    .start-btn-container>button {
+        font-size: 12px;
+    }
+}
+
+.start-btn-container>.start-btn {
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    text-align: left;
+    color: #CEDEF2;
+    background: #3F5573;
+    border: 3px solid #3F5573;
+    border-radius: 25px;
+}
+
+/*
+signup.html
+*/
+
+.signup {
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+}
+
+.signup-logo-container {
+    /* 컨테이너 사이즈 조절 필요 (이미지 비율은 괜찮은데 사이즈가 작음) */
+    position: absolute;
+    width: 539px;
+    min-width: 350px;
+    height: 166px;
+    left: calc((100vw - 539px) / 2);
+    top: 100px;
+}
+
+.signup-logo-img {
+    width: 100%;
+    height: 72px;
+    top: 0;
+
+    background: url(img/logo.png);
+    background-size: cover;
+}
+
+@media (max-width: 988px) {
+    .signup-logo-container {
+        width: 54.5vw;
+        left: 24.7vw;
+    }
+
+    .signup-logo-img {
+        height: calc(54.5vw * 13 / 100);
+    }
+}
+
+@media (max-width: 633px) {
+    .signup-logo-container {
+        width: 350px;
+        left: calc((100vw - 350px) / 2)
+    }
+
+    .signup-logo-img {
+        height: calc(350px * 13 / 100);
+    }
+}
+
+@media (max-width: 400px) {
+    .signup-logo-container {
+        width: 100vw;
+        left: 0;
+    }
+
+    .signup-logo-img {
+        height: calc(100% * 13 / 100);
+    }
+}
+
+.signup-logo-container>.signup-logo-text {
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 71%;
+
+    font-family: 'Pretendard';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    align-items: center;
+    text-align: center;
+
+    color: #3F5573;
+    margin: 0 auto;
+}
+
+@media (max-width: 988px) {
+    .signup-logo-container>.signup-logo-text {
+        top: calc(54.5vw * 13 / 100 + 29%);
+    }
+}
+
+@media (max-width: 633px) {
+    .signup-logo-container>.signup-logo-text {
+        top: calc(350px * 13 / 100 + 29%);
+    }
+}
+
+@media (max-width: 400px) {
+    .signup-logo-container>.signup-logo-text {
+        height: calc(100% * 13 / 100 + 29%);
+        font-size: 35px;
+    }
+}
+
+.signup-form {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 692px;
+    height: 65vh;
+    min-height: 500px;
+    left: calc((100vw - 692px) / 2);
+    top: 310px;
+
+    background: #FFFFFF;
+    border: 2px solid #6878A6;
+    box-shadow: 0px 6px 24px 2px rgba(206, 222, 242, 0.75);
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 988px) {
+    .signup-form {
+        width: 70vw;
+        left: 15%;
+    }
+}
+
+.signup-form>input {
+    padding-left: 6.6%;
+    box-sizing: border-box;
+
+    position: absolute;
+
+    background: #FFFFFF;
+    border: 3px solid #3F5573;
+    border-radius: 25px;
+
+    font-family: 'Pretendard';
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+
+    color: #3F5573;
+}
+
+.signup-form>button {
+    padding-left: 6.6%;
+    background: #3F5573;
+    border: 3px solid #3F5573;
+    border-radius: 25px;
+    color: #CEDEF2;
+    text-align: left;
+
+    font-family: 'Pretendard';
+    font-size: 25px;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.signup-form>.signup-form-name {
+    position: absolute;
+    width: 77.8%;
+    height: 12.6%;
+    top: 6.7%;
+}
+
+.signup-form>.signup-form-account {
+    position: absolute;
+    width: 77.8%;
+    height: 12.6%;
+    top: 24.6%;
+}
+
+.signup-form>.signup-form-password {
+    position: absolute;
+    width: 77.8%;
+    height: 12.6%;
+    top: 42.5%;
+}
+
+.signup-form>.signup-form-repassword {
+    position: absolute;
+    width: 77.8%;
+    height: 12.6%;
+    top: 60.4%;
+}
+
+.signup-form>.signup-form-btn {
+    position: absolute;
+    width: 77.8%;
+    height: 12.6%;
+    top: 80.7%;
+}
+
+@media (max-width: 988px) {
+    .signup-form>.signup-form-name {
+        width: 77.8%;
+        height: 12.6%;
+    }
+
+    .signup-form>.signup-form-account {
+        width: 77.8%;
+        height: 12.6%;
+    }
+
+    .signup-form>.signup-form-password {
+        width: 77.8%;
+        height: 12.6%;
+    }
+
+    .signup-form>.signup-form-repassword {
+        width: 77.8%;
+        height: 12.6%;
+    }
+
+    .signup-form>.signup-form-btn {
+        width: 77.8%;
+        height: 12.6%;
+    }
+
+    .signup-form>input {
+        font-size: 20px;
+    }
+
+    .signup-form>button {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .signup-from>input {
+        font-size: 17px;
+    }
+}
+
+/*
+메인 페이지(관리자)
+*/
+
+.menu-bar {
+    position: absolute;
+    width: 18.75vw;
+    height: 100vh;
+    min-height: 800px;
+    left: 0px;
+    top: 0px;
+
+    background: #3F5573;
+    box-shadow: 0px 6px 24px 6px rgba(206, 222, 242, 0.5);
+}
+
+.menu-bar>.menu-logo-container {
+    position: absolute;
+    width: 91.1%;
+    height: 8.14%;
+    left: 4.4%;
+    top: 5.27%;
+}
+
+.menu-logo-container>.menu-logo {
+    padding-top: 26.78%;
+    width: 100%;
+    height: auto;
+    background: url(img/logo-menu.png);
+    background-size: cover;
+}
