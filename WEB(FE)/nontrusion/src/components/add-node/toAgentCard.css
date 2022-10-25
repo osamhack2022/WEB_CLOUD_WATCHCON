@@ -1,0 +1,65 @@
+.node-card {
+    border: 2px solid #5a68bc !important;
+}
+
+.add-node-success-card-subtitle {
+    color: #6878a6;
+    opacity: 0.5;
+    font-size: 25px;
+}
+
+.add-node-success-card-title {
+    color: #6878a6;
+    font-size: 35px;
+}
+
+.add-node-success-description {
+    font-size: 20;
+    color: #a3a3a3;
+}
+
+.add-node-success-head {
+    padding-left: 25px;
+}
+
+.add-node-success-detail {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.card-hr {
+    border-top: 1.5px solid #6878a6;
+}
+
+.add-node-success-detail-table-head {
+    width: 68px;
+    font-size: 20px;
+    color: #000;
+}
+
+.add-node-success-detail-table-value {
+    font-size: 20px;
+    color: #bfbfbd;
+}
+
+.text-green {
+    color: #319e50;
+}
+
+.message {
+    font-size: 45px;
+    color: #000;
+}
+
+.next-button {
+    border-radius: 25px;
+    background-color: #3f5573;
+    color: #cedef2;
+    font-size: 30px;
+}
+
+.info-head {
+    margin-left: 20px;
+    color: #3f5573;
+    font-size: 30px;
+}
