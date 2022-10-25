@@ -3,8 +3,7 @@
     "name": "WATCHCON - OSAM2022 Hackathon",
     "icons": [
         {
-            "src": "favicon.ico",
-            "type": "image/x-icon"
+            "src": "icon.svg"
         }
     ],
     "start_url": ".",
