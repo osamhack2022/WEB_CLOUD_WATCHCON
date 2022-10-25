@@ -31,24 +31,8 @@ const SideNav = ({ selected }) => {
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    <Nav.Link href="/cluster" className={selected === 'cluster' ? 'active' : null}>
-                        서버클러스터
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item className="master-nav-menu-analyze-log">
-                    <Nav.Link
-                        href="/analyze-log"
-                        className={selected === 'analyze-log' ? 'active' : null}
-                    >
-                        로그 분석&nbsp;
-                        <ChevronDown />
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item
-                    className={selected === 'events' ? 'selected-sub-menu' : 'sub-nav-menu-events'}
-                >
-                    <Nav.Link href="/events" className={selected === 'events' ? 'active' : null}>
-                        주요 위협 이벤트
+                    <Nav.Link href="/alerts" className={selected === 'alerts' ? 'active' : null}>
+                        주요 경고
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item className="master-nav-menu-manage-node">

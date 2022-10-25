@@ -2,11 +2,11 @@ import React from 'react';
 import { Route, Routes, Link } from 'react-router-dom';
 
 import Dashboard from './pages/Dashboard';
-import Cluster from './pages/Cluster';
-import AnalyzeLog from './pages/AnalyzeLog';
-import Events from './pages/Events';
+import Alerts from './pages/Alerts';
 import ManageNode from './pages/ManageNode';
-import AddNode from './pages/AddNode';
+import AddNode from './pages/add-node/AddNode';
+import AddNodeSuccess from './pages/add-node/AddNodeSuccess';
+import ToAgent from './pages/add-node/ToAgent';
 import ManageService from './pages/ManageService';
 import AddService from './pages/AddService';
 import Report from './pages/Report';
@@ -18,11 +18,11 @@ const App = () => {
         <Routes>
             <Route exact path="/" element={<Link to="/dashboard">to Dashboard</Link>} />
             <Route path="/dashboard" element={<Dashboard />} />
-            <Route path="/cluster" element={<Cluster />} />
-            <Route path="/analyze-log" element={<AnalyzeLog />} />
-            <Route path="/events" element={<Events />} />
+            <Route path="/alerts" element={<Alerts />} />
             <Route path="/manage-node" element={<ManageNode />} />
             <Route path="/add-node" element={<AddNode />} />
+            <Route path="/add-node/success" element={<AddNodeSuccess />} />
+            <Route path="/add-node/to-agent" element={<ToAgent />} />
             <Route path="/manage-service" element={<ManageService />} />
             <Route path="/add-service" element={<AddService />} />
             <Route path="/report" element={<Report />} />

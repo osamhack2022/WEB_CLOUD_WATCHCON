@@ -1,8 +1,8 @@
 .nav-pills .nav-link {
     background-color: transparent;
-    margin: 5px;
+    margin: 13px;
     color: #fff;
-    font-size: 18px;
+    font-size: 20px;
     justify-content: center;
     flex-direction: column;
 }
@@ -67,12 +67,12 @@
 .nav-pills .show > .nav-link {
     width: auto;
     height: 60px;
-    margin: 5px;
+    margin: 18px;
     margin-left: 5%;
     color: #fff;
     border-radius: 15px;
     background-color: #5a6b8c;
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
     justify-content: center;
     flex-direction: column;
