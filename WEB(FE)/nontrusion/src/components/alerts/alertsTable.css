@@ -1,0 +1,33 @@
+.table-head {
+    color: rgba(0, 0, 0);
+    font-size: 25px;
+}
+
+.alert-type {
+    color: #6878a6;
+    font-size: 25px;
+}
+.alert-time {
+    color: #6878a6;
+    font-size: 16px;
+}
+
+.alert-server-name {
+    color: #6878a6;
+    font-size: 16px;
+}
+
+.alert-detail {
+    color: #6878a6;
+    font-size: 16px;
+}
+
+.alert-count {
+    color: #000;
+    font-size: 25px;
+}
+
+.show-more-button {
+    color: #6878a6;
+    opacity: 0.5;
+}
