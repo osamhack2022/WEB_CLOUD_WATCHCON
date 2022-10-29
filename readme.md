@@ -63,6 +63,8 @@ $ yarn start or npm run start
 ```
 
 ## 프로젝트 사용법 (Getting Started)
+![start](./nontrusion_start.png)
+
 위 화면에서 초기 설정 진행 후..
 
 NonTrusion에 오신 걸 환영합니다 :D
