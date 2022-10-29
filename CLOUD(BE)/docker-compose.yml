@@ -101,8 +101,8 @@ services:
     networks:
       - default
       - proxy_network
-    # ports:
-    #   - "10051:10051"
+    ports:
+      - "10051:10051"
     volumes:
       - /etc/localtime:/etc/localtime:ro
       - ./config/zabbix:/usr/lib/zabbix
