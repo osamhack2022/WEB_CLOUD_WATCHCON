@@ -67,6 +67,7 @@ $ yarn start or npm run start
 
 위 화면에서 초기 설정 진행 후..
 
+![end](./nontrusion_end.png)
 NonTrusion에 오신 걸 환영합니다 :D
 
  
